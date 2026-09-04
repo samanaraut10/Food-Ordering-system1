@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9c9d6;
+}
+
+.home-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f9c9d6 0%, #f7bdd0 100%);
+  padding: 24px 40px 60px;
+}
+
+.logo {
+  font-family: 'Grand Hotel', cursive;
+  color: #e6417a;
+  font-weight: 400;
+  line-height: 1;
+  text-shadow: 0 2px 6px rgba(230, 65, 122, 0.15);
+}
+
+.heart {
+  font-size: 16px;
+  color: #e6417a;
+  vertical-align: super;
+  margin-left: 2px;
+}
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 12px 28px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.navbar .logo {
+  font-size: 26px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a3a3f;
+}
+
+.nav-links a.active {
+  text-decoration: underline;
+  color: #e6417a;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f6f0f1;
+  border-radius: 16px;
+  padding: 6px 14px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  width: 90px;
+}
+
+.search-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  opacity: 0.6;
+}
+
+.cart-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 26px;
+  padding: 0 10px;
+}
+
+.hero-text h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #2b2020;
+  line-height: 1.3;
+}
+
+.hero-text p {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b5a5e;
+  letter-spacing: 0.5px;
+}
+
+.hero-image {
+  position: relative;
+  width: 300px;
+  height: 220px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-emoji {
+  width: 220px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.18));
+}
+
+.hero-emoji.fries {
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+  width: 100px;
+  height: auto;
+}
+
+/* =========================================
+   POPULAR NEAR YOU
+   ========================================= */
+
+.popular-section {
+  margin-top: 30px;
+}
+
+.section-tag {
+  display: inline-block;
+  background: #ffffff;
+  color: #e6417a;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+}
+
+.popular-cards {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.popular-card {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+}
+
+.popular-card.wide {
+  flex: 1;
+}
+
+.popular-emoji {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.popular-name {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2b2020;
+}
+
+.popular-price {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #e6417a;
+  background: #fdeaf0;
+  padding: 2px 10px;
+  border-radius: 10px;
+}
+
+/* =========================================
+   EXPLORE CATEGORIES
+   ========================================= */
+
+.categories-section {
+  margin-top: 30px;
+}
+
+.category-list {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.category-item {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+}
+
+.category-emoji {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.category-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #2b2020;
+}
+
+.order-btn {
+  display: block;
+  margin-left: auto;
+  padding: 12px 30px;
+  background: #e6417a;
+  color: #ffffff;
+  border: none;
+  border-radius: 22px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(230, 65, 122, 0.3);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.order-btn:hover {
+  background: #d1305f;
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 700px) {
+  .home-screen {
+    padding: 18px 18px 40px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    gap: 12px;
+    border-radius: 20px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 180px;
+  }
+
+  .hero-emoji {
+    width: 160px;
+  }
+
+  .popular-cards {
+    flex-direction: column;
+  }
+
+  .category-list {
+    flex-wrap: wrap;
+  }
+
+  .category-item {
+    flex: 1 1 30%;
+  }
+}
