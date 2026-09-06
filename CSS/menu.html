@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +13,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="menu.css">
+
+    <style>
+        .add-cart-btn {
+            margin-top: 8px;
+            padding: 7px 14px;
+            border: none;
+            border-radius: 20px;
+            background: #e6417a;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .add-cart-btn:hover {
+            background: #d1305f;
+        }
+
+        .item-info {
+            flex: 1;
+        }
+
+        .cart-link {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .cart-icon {
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,30 +62,22 @@
         <nav class="nav-links">
             <a href="home.html">Home</a>
             <a href="menu.html" class="active">Menu</a>
+            <a href="../logout.php">Logout</a>
         </nav>
 
         <div class="nav-actions">
 
             <div class="search-box">
 
-                <img
-                    src="https://cdn-icons-png.flaticon.com/512/622/622669.png"
-                    alt="Search"
-                    class="search-icon"
-                >
-
-                <input
-                    type="text"
-                    placeholder="search for food"
-                >
+                <a href="../cart.html" class="cart-link">
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/512/3514/3514491.png"
+                        alt="Cart"
+                        class="cart-icon"
+                    >
+                </a>
 
             </div>
-
-            <img
-                src="https://cdn-icons-png.flaticon.com/512/3514/3514491.png"
-                alt="Cart"
-                class="cart-icon"
-            >
 
         </div>
 
@@ -59,12 +85,10 @@
 
 
     <!-- MENU TITLE -->
-
     <h2 class="menu-title">Our Menu</h2>
 
 
     <!-- THREE COLUMNS -->
-
     <div class="menu-columns">
 
 
@@ -76,7 +100,6 @@
 
 
             <!-- Burger -->
-
             <div class="menu-item">
 
                 <img
@@ -88,13 +111,17 @@
                 <div class="item-info">
                     <p class="item-name">Burger</p>
                     <span class="item-price">Rs.300</span>
+
+                    <button class="add-cart-btn"
+                        onclick="addToCart('Burger', 300)">
+                        Add to Cart
+                    </button>
                 </div>
 
             </div>
 
 
             <!-- Momo -->
-
             <div class="menu-item">
 
                 <img
@@ -106,13 +133,17 @@
                 <div class="item-info">
                     <p class="item-name">Momo</p>
                     <span class="item-price">Rs.180</span>
+
+                    <button class="add-cart-btn"
+                        onclick="addToCart('Momo', 180)">
+                        Add to Cart
+                    </button>
                 </div>
 
             </div>
 
 
             <!-- Chowmein -->
-
             <div class="menu-item">
 
                 <img
@@ -124,13 +155,17 @@
                 <div class="item-info">
                     <p class="item-name">Chowmein</p>
                     <span class="item-price">Rs.150</span>
+
+                    <button class="add-cart-btn"
+                        onclick="addToCart('Chowmein', 150)">
+                        Add to Cart
+                    </button>
                 </div>
 
             </div>
 
 
             <!-- Sandwich -->
-
             <div class="menu-item">
 
                 <img
@@ -142,13 +177,17 @@
                 <div class="item-info">
                     <p class="item-name">Sandwich</p>
                     <span class="item-price">Rs.220</span>
+
+                    <button class="add-cart-btn"
+                        onclick="addToCart('Sandwich', 220)">
+                        Add to Cart
+                    </button>
                 </div>
 
             </div>
 
 
             <!-- Fried Rice -->
-
             <div class="menu-item">
 
                 <img
@@ -160,13 +199,17 @@
                 <div class="item-info">
                     <p class="item-name">Fried Rice</p>
                     <span class="item-price">Rs.200</span>
+
+                    <button class="add-cart-btn"
+                        onclick="addToCart('Fried Rice', 200)">
+                        Add to Cart
+                    </button>
                 </div>
 
             </div>
 
 
             <!-- Pizza -->
-
             <div class="menu-item">
 
                 <img
@@ -178,12 +221,16 @@
                 <div class="item-info">
                     <p class="item-name">Pizza</p>
                     <span class="item-price">Rs.450</span>
+
+                    <button class="add-cart-btn"
+                        onclick="addToCart('Pizza', 450)">
+                        Add to Cart
+                    </button>
                 </div>
 
             </div>
 
         </div>
-
 
 
         <!-- ================= DESSERTS ================= -->
@@ -196,7 +243,6 @@
 
 
             <!-- Butterscotch -->
-
             <div class="menu-item">
 
                 <img
@@ -208,13 +254,17 @@
                 <div class="item-info">
                     <p class="item-name">Butterscotch</p>
                     <span class="item-price">Rs.150</span>
+
+                    <button class="add-cart-btn"
+                        onclick="addToCart('Butterscotch', 150)">
+                        Add to Cart
+                    </button>
                 </div>
 
             </div>
 
 
             <!-- Vanilla -->
-
             <div class="menu-item">
 
                 <img
@@ -226,13 +276,17 @@
                 <div class="item-info">
                     <p class="item-name">Vanilla</p>
                     <span class="item-price">Rs.120</span>
+
+                    <button class="add-cart-btn"
+                        onclick="addToCart('Vanilla', 120)">
+                        Add to Cart
+                    </button>
                 </div>
 
             </div>
 
 
             <!-- Blueberry -->
-
             <div class="menu-item">
 
                 <img
@@ -244,6 +298,11 @@
                 <div class="item-info">
                     <p class="item-name">Blueberry</p>
                     <span class="item-price">Rs.160</span>
+
+                    <button class="add-cart-btn"
+                        onclick="addToCart('Blueberry', 160)">
+                        Add to Cart
+                    </button>
                 </div>
 
             </div>
@@ -253,7 +312,6 @@
 
 
             <!-- Chocolate Cake -->
-
             <div class="menu-item">
 
                 <img
@@ -265,13 +323,17 @@
                 <div class="item-info">
                     <p class="item-name">Chocolate Cake</p>
                     <span class="item-price">Rs.400</span>
+
+                    <button class="add-cart-btn"
+                        onclick="addToCart('Chocolate Cake', 400)">
+                        Add to Cart
+                    </button>
                 </div>
 
             </div>
 
 
             <!-- Red Velvet -->
-
             <div class="menu-item">
 
                 <img
@@ -283,13 +345,17 @@
                 <div class="item-info">
                     <p class="item-name">Red Velvet</p>
                     <span class="item-price">Rs.450</span>
+
+                    <button class="add-cart-btn"
+                        onclick="addToCart('Red Velvet', 450)">
+                        Add to Cart
+                    </button>
                 </div>
 
             </div>
 
 
             <!-- Pineapple Cake -->
-
             <div class="menu-item">
 
                 <img
@@ -301,12 +367,16 @@
                 <div class="item-info">
                     <p class="item-name">Pineapple Cake</p>
                     <span class="item-price">Rs.380</span>
+
+                    <button class="add-cart-btn"
+                        onclick="addToCart('Pineapple Cake', 380)">
+                        Add to Cart
+                    </button>
                 </div>
 
             </div>
 
         </div>
-
 
 
         <!-- ================= DRINKS ================= -->
@@ -317,7 +387,6 @@
 
 
             <!-- Virgin Mojito -->
-
             <div class="menu-item">
 
                 <img
@@ -329,13 +398,17 @@
                 <div class="item-info">
                     <p class="item-name">Virgin Mojito</p>
                     <span class="item-price">Rs.150</span>
+
+                    <button class="add-cart-btn"
+                        onclick="addToCart('Virgin Mojito', 150)">
+                        Add to Cart
+                    </button>
                 </div>
 
             </div>
 
 
             <!-- Oreo Shake -->
-
             <div class="menu-item">
 
                 <img
@@ -347,13 +420,17 @@
                 <div class="item-info">
                     <p class="item-name">Oreo Shake</p>
                     <span class="item-price">Rs.180</span>
+
+                    <button class="add-cart-btn"
+                        onclick="addToCart('Oreo Shake', 180)">
+                        Add to Cart
+                    </button>
                 </div>
 
             </div>
 
 
             <!-- Cold Coffee -->
-
             <div class="menu-item">
 
                 <img
@@ -365,13 +442,17 @@
                 <div class="item-info">
                     <p class="item-name">Cold Coffee</p>
                     <span class="item-price">Rs.160</span>
+
+                    <button class="add-cart-btn"
+                        onclick="addToCart('Cold Coffee', 160)">
+                        Add to Cart
+                    </button>
                 </div>
 
             </div>
 
 
             <!-- Iced Latte -->
-
             <div class="menu-item">
 
                 <img
@@ -383,6 +464,11 @@
                 <div class="item-info">
                     <p class="item-name">Iced Latte</p>
                     <span class="item-price">Rs.170</span>
+
+                    <button class="add-cart-btn"
+                        onclick="addToCart('Iced Latte', 170)">
+                        Add to Cart
+                    </button>
                 </div>
 
             </div>
@@ -393,5 +479,26 @@
 
 </div>
 
+
+<script>
+
+function addToCart(name, price) {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({
+        name: name,
+        price: price,
+        quantity: 1
+    });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert(name + " added to cart!");
+}
+
+</script>
+
 </body>
 </html>
+
